@@ -27,9 +27,12 @@ interaction.addEventListener('animationend', jumpHandler)
 
 // Stap 1: querySelector
 // let bibberLink = document.querySelector...
-
+let bibberknop = document.querySelector('a:nth-of-type(1)')
 // Stap 2: addEventListener
 // bibberLink.addEventListener...
-
+bibberknop.addEventListener('click', bibberen)
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+function bibberen() {
+  bibberknop.classList.toggle('shake')
+}
 // bibberLink.classList.toggle...
