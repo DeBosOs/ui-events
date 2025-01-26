@@ -36,3 +36,63 @@ function bibberen() {
   bibberknop.classList.toggle('shake')
 }
 // bibberLink.classList.toggle...
+
+
+// knop 2
+const draaiKnop = document.querySelector('a:nth-of-type(2)');
+
+document.addEventListener('keyup', (event) => {
+
+  if (event.key === " " || event.key === "Spacebar") {
+
+    draaiKnop.classList.toggle('andersom');
+  }
+});
+
+// knop 3
+const krimpKnop = document.querySelector('a:nth-of-type(3)');
+
+krimpKnop.addEventListener('click', groeien);
+function groeien(e) {
+  e.target.classList.toggle('groeien')
+}
+
+// knop 4
+const stuiterKnop = document.querySelector('a:nth-of-type(4)');
+stuiterKnop.addEventListener('click', stuiteren);
+function stuiteren(e) {
+  stuiterKnop.classList.toggle('stuiteren')
+}
+
+// knop 5
+const sarah = document.querySelector('a:nth-of-type(5)');
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 800) {
+    sarah.classList.add('move'); 
+  } else {
+    sarah.classList.remove('move');
+  }
+});
+
+// knop 6
+const spinKnop = document.querySelector('a:nth-of-type(6)');
+
+spinKnop.addEventListener('click', rondje);
+function rondje(){
+  spinKnop.classList.toggle('rondje')
+}
+
+// knop 7
+const hoverKnop = document.querySelector('a:nth-of-type(7)');
+
+hoverKnop.addEventListener('mouseover', groter);
+hoverKnop.addEventListener('mouseout', kleiner);
+
+function groter() {
+  hoverKnop.classList.add('groter');
+}
+
+function kleiner() {
+  hoverKnop.classList.remove('groter');
+}
